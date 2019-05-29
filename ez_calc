@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>ez_calc</title>
+ 		<script>
+		function add() {
+        // объявляем переменную и возвращаем число с плавующей точкой
+			var x = parseFloat(document.getElementById('x').value);
+			var y = parseFloat(document.getElementById('y').value);
+            // складываем
+ 			var z = x + y;   
+            // возвращает ссылку на элемент, выводим результат и округляем до десятых
+            document.getElementById('result').innerHTML = "Результат:<br />" + z.toFixed(2);
+       		}
+         function subst() {
+ 			var x = parseFloat(document.getElementById('x').value);
+			var y = parseFloat(document.getElementById('y').value);
+            var z = x - y;
+            document.getElementById('result').innerHTML = "Результат:<br />" + z.toFixed(2);
+       		}
+         function mult() {
+ 			var x = parseFloat(document.getElementById('x').value);
+			var y = parseFloat(document.getElementById('y').value);
+            var z = x * y;   
+            document.getElementById('result').innerHTML = "Результат:<br />" + z.toFixed(2);
+       		}
+        function div() {
+ 			var x = parseFloat(document.getElementById('x').value);
+			var y = parseFloat(document.getElementById('y').value);
+            var z = x / y;   
+            document.getElementById('result').innerHTML = "Результат:<br />" + z.toFixed(2);
+       		}
+        
+		</script>
+	</head>
+	<body>
+		<form>
+			<input id="x" type="text" value=""><br>
+			<input id="y" type="text" value=""><br><p>
+			<input type="button" value="+" onclick="add();">
+            <input type="button" value="-" onclick="subst();">
+            <input type="button" value="*" onclick="mult();">
+            <input type="button" value="/" onclick="div();">
+		</form>
+	<div id="result"></div>
+	</body>
+</html>
